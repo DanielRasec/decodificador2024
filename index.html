@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <title> Mensagem Criptografada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img class="img__logo" src="assets/Logo.png" width="120" height="48" alt="Logo Alura">
+            <div class="indicador"></div>    
+    </header> 
+    <div class="main">
+        <div class="conteiner__label">
+            <label for="originalText"></label>
+            <textarea id="originalText" name="originalText" style="resize: none;" placeholder="Digite aqui o texto que  deseja criptografar ou descriptografar"
+                class="container__text"></textarea>   
+                <div style="display: inline-block;">
+                    <img class="img__frame" src="./assets/frame.png" width="21" height="18" alt="ponto de exclamação">
+                    <span style="display: block; text-align: center; color: red; font-size: 0.9rem;">Apenas letras minúsculas e sem acentos.</span>
+                  </div>
+                   
+            <div class="buttons">
+            <button class="btncripto" onclick="criptografar()" id="criptografar"><h3>Criptografar</h3></button>
+            <button class="btndescripto" onclick="descriptografar()" id="descriptografar"><h3>Descriptografar</h3></button>
+        </div>    
+        </div>       
+    </div>
+    <div class="side">
+        <div class="caixa" id="caixa">
+            <div class="containerCaixa" id="containerCaixa">
+                <img class="img__pesquisa" id="img__pesquisa" src="assets/sherlock.jpg"
+                    alt="sherlock pesquisando">
+                <div class="p" id="p">
+                    <p><strong style="font-size: 1.4rem;"> Nenhum texto digitado</strong></p>
+                    <p>Digite um texto ao lado.</p>
+                </div>
+            </div>
+            <div id="novoTexto" style="display: none;" class="novoTexto">
+                <textarea id="output" name="output" style="resize: none;" class="output"></textarea>
+                <div id="alerta" class="alerta"></div>
+            </div>
+            <button class="btncopy" onclick="copiar()" style="display: none;" id="copiar"><h3></h3>Copiar</h3></button>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
+
